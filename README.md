@@ -1,3 +1,10 @@
+**!!!**
+**forked from https://github.com/xanzy/go-gitlab**
+**the main point is to make possible use with gitlab oauth2 authentication/authorization**
+
+
+
+
 # go-gitlab
 
 A GitLab API client enabling Go programs to interact with GitLab in a simple and uniform way
