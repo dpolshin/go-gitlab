@@ -17,7 +17,7 @@
 package gitlab
 
 import (
-	"bytes"
+//	"bytes"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -217,7 +217,8 @@ func (c *Client) NewRequest(method, path string, opt interface{}) (*http.Request
 		Host:       u.Host,
 	}
 
-	if method == "POST" || method == "PUT" {
+//todo: temporary measure. gitlab v3 api wants opts in the url, not in a body;
+/*	if method == "POST" || method == "PUT" {
 		bodyBytes, err := json.Marshal(opt)
 		if err != nil {
 			return nil, err
@@ -228,7 +229,7 @@ func (c *Client) NewRequest(method, path string, opt interface{}) (*http.Request
 		req.Body = ioutil.NopCloser(bodyReader)
 		req.ContentLength = int64(bodyReader.Len())
 		req.Header.Set("Content-Type", "application/json")
-	}
+	}*/
 
 	req.Header.Set("Accept", "application/json")
 
